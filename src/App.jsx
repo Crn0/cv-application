@@ -20,6 +20,27 @@ function App() {
   const [responsibility, setResponsibility] = useState('');
   const [jobExperience, setJobExperience] = useState({start: '', end: ''});
 
+  const EventHandlers = {
+    HandleFirstName: (e) => Events.HandleFirstName(e, personName, setPersonName),
+    HandleLastName: (e) => Events.HandleLastName(e, personName, setPersonName),
+    HandleEmail: (e) => Events.HandleEmail(e, contactInfo, setContactInfo),
+    HandlePhoneNumber: (e) => Events.HandlePhoneNumber(e, contactInfo, setContactInfo),
+
+    HandleSchoolName: (e) => Events.HandleSchoolName(e, schoolInfo, setSchoolInfo),
+    HandleSchoolDegree: (e) => Events.HandleSchoolDegree(e, schoolInfo, setSchoolInfo),
+    HandleSchoolStart: (e) => Events.HandleSchoolStart(e, schooling, setSchooling),
+    HandleSchoolEnd: (e) => Events.HandleSchoolEnd(e, schooling, setSchooling),
+
+    HandleCompanyName: (e) => Events.HandleCompanyName(e, companyInfo, setCompanyInfo),
+    HandleCompanyJob: (e) => Events.HandleCompanyJob(e, companyInfo, setCompanyInfo),
+    HandleResponsibility: (e) => Events.HandleResponsibility(e, setResponsibility),
+    HandleJobStart: (e) => Events.HandleJobStart(e, jobExperience, setJobExperience),
+    HandleJobEnd: (e) => Events.HandleJobEnd(e, jobExperience, setJobExperience),
+
+    HandleSubmit: (e) => Events.HandleSubmit(e, setStatus),
+    HandleEdit: (e) => Events.HandleEdit(e, setStatus),
+  };
+
   const personalInfo = {personName, contactInfo};
   const educationInfo = {schoolInfo, schooling};
   const experienceInfo = {companyInfo, responsibility, jobExperience};
