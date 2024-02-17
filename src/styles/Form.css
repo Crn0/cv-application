@@ -1,0 +1,62 @@
+form {
+    display: grid;
+    place-content: center;
+    place-items: center;
+    gap: 25px;
+}
+
+label {
+    display: grid; 
+}
+
+.information, .education {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 450px;
+}
+
+.experience {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 250px;
+    gap: 25px;
+}
+
+/* 
+.company {
+    grid-column: 1/1;
+    grid-row: 1;
+}
+
+.job-title {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.responsibility {
+    position: relative;
+
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.responsibility > span {
+    position: absolute;
+    top: -5%;
+    right: 101%;
+}
+
+.job-start {
+    grid-column: 1;
+}
+
+.job-end {
+    grid-column: 2;
+} */
+
+.hide {
+    display: none;
+}
