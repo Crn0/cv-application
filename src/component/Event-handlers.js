@@ -42,7 +42,7 @@ export function HandleCompanyJob(e, companyInfo, setCompanyInfo) {
 };
 
 export function HandleResponsibility(e, setResponsibility) {
-    setResponsibility(e.targe.value);
+    setResponsibility(e.target.value);
 };
 
 export function HandleJobStart(e, jobExperience, setJobExperience) {
