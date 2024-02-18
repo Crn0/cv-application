@@ -50,11 +50,27 @@ function App() {
   
   return (
     <>
-      <div className="title"><h1>CV Form</h1></div>
+      <div className="title">
+        <h1>CV Form</h1>
+      </div>
     
-      <Form isOpen={isOpen} personalInfo={personalInfo} educationInfo={educationInfo} experienceInfo={experienceInfo} EventHandlers={EventHandlers}/>
+      <Form 
+        isOpen={isOpen} 
+        personalInfo={personalInfo} 
+        educationInfo={educationInfo} 
+        experienceInfo={experienceInfo} 
+        EventHandlers={EventHandlers}
+      />
 
-      {!isOpen && <Page personalInfo={personalInfo} educationInfo={educationInfo} experienceInfo={experienceInfo} EventHandlers={EventHandlers}/>}
+      {
+        !isOpen && 
+        <Page 
+            personalInfo={personalInfo} 
+            educationInfo={educationInfo} 
+            experienceInfo={experienceInfo} 
+            EventHandlers={EventHandlers}
+        />
+      }
 
       
     </>
