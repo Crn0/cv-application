@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState } from 'react'
 import * as Events from './component/Event-handlers';
+import Header from './component/Header';
 import Form from './component/Form';
 import Page from './component/Page-content';
 import './App.css'
@@ -50,9 +51,7 @@ function App() {
   
   return (
     <>
-      <div className="title">
-        <h1>CV Form</h1>
-      </div>
+      <Header title={'Cv Form'}/>
     
       <Form 
         isOpen={isOpen} 
