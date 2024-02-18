@@ -85,10 +85,7 @@ export default function Form({isOpen, personalInfo, educationInfo, experienceInf
                         </label>
                     </fieldset>
 
-                    <div>
                     <button type="submit">Submit</button>
-                    <button type="button">Preview</button>
-                    </div>
                 </form>
             </dialog>
         </div>
