@@ -1,0 +1,11 @@
+.page-container {
+    display: grid;
+    place-content: center;
+    place-items: center;
+}
+
+section {
+    display: grid;
+    place-content: center;
+    place-items: center;
+}
