@@ -2,8 +2,10 @@
 import { useState } from 'react'
 import * as Events from './component/Event-handlers';
 import Form from './component/Form';
+import Page from './component/Page-content';
 import './App.css'
 import './styles/Form.css'
+import './styles/Page-content.css'
 
 function App() {
   // dialog state
@@ -41,18 +43,20 @@ function App() {
     HandleEdit: (e) => Events.HandleEdit(e, setStatus),
   };
 
+  // put states in object for easier access
   const personalInfo = {personName, contactInfo};
   const educationInfo = {schoolInfo, schooling};
   const experienceInfo = {companyInfo, responsibility, jobExperience};
   
   return (
     <>
-    <div className="title"><h1>CV Form</h1></div>
-     <div className="form-container">
+      <div className="title"><h1>CV Form</h1></div>
+    
       <Form isOpen={isOpen} personalInfo={personalInfo} educationInfo={educationInfo} experienceInfo={experienceInfo} EventHandlers={EventHandlers}/>
-     </div>
 
-     <div className="page-container"><p>{personalInfo.personName.firstName}</p></div>
+      {!isOpen && <Page personalInfo={personalInfo} educationInfo={educationInfo} experienceInfo={experienceInfo} EventHandlers={EventHandlers}/>}
+
+      
     </>
   )
 }
