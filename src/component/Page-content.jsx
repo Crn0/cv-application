@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-export default function Page({personalInfo, educationInfo, experienceInfo,}) {
+export default function Page({personalInfo, educationInfo, experienceInfo, EventHandlers}) {
     // personal info
     const fullName = `${personalInfo.personName.firstName} ${personalInfo.personName.lastName}`;
     const email = personalInfo.contactInfo.email;
@@ -13,9 +13,7 @@ export default function Page({personalInfo, educationInfo, experienceInfo,}) {
     const jobTitle = experienceInfo.companyInfo.job;
     const responsibility = experienceInfo.responsibility;
     const employment = `${experienceInfo.jobExperience.start} ${experienceInfo.jobExperience.end}`
-     
-
-
+    
     return (
         <div className="page-container">
             <section className="personal-info">
@@ -25,7 +23,7 @@ export default function Page({personalInfo, educationInfo, experienceInfo,}) {
                 <p className="phone-number">{number}</p>
             </section>
 
-            <section className="education">
+            <section className="education-info">
                 <h2>Education</h2>
                 <p className="school-name">{schoolName}</p>
                 <p className="degree">{schoolDegree}</p>
@@ -39,6 +37,10 @@ export default function Page({personalInfo, educationInfo, experienceInfo,}) {
                 <p className="responsibility">{responsibility}</p>
                 <p className="employment">{employment}</p>
             </section>
+
+            <div className="edit-container">
+                <button type="button" onClick={EventHandlers.HandleEdit}>Edit</button>
+            </div>
         </div>
     )
 }
