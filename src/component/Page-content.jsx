@@ -7,13 +7,13 @@ export default function Page({personalInfo, educationInfo, experienceInfo, Event
     // education info
     const schoolName = educationInfo.schoolInfo.name;
     const schoolDegree = educationInfo.schoolInfo.degree;
-    const schoolDays = `${educationInfo.schooling.start} ${educationInfo.schooling.end}`;
+    const schoolDays = `${educationInfo.schooling.start} - ${educationInfo.schooling.end}`;
     // experience info
     const companyName = experienceInfo.companyInfo.name;
     const jobTitle = experienceInfo.companyInfo.job;
     const responsibility = experienceInfo.responsibility;
-    const employment = `${experienceInfo.jobExperience.start} ${experienceInfo.jobExperience.end}`
-    
+    const employment = `${experienceInfo.jobExperience.start} - ${experienceInfo.jobExperience.end}`
+  
     return (
         <div className="page-container">
             <section className="personal-info">
