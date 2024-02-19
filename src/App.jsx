@@ -1,9 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState } from 'react'
-import * as Events from './component/Event-handlers';
-import Header from './component/Header';
-import Form from './component/Form';
-import Page from './component/Page-content';
+import * as Events from './component/Helper/Event-handlers';
+import Main from './component/Wrapper';
 import './App.css'
 import './styles/Form.css'
 import './styles/Page-content.css'
@@ -51,27 +49,13 @@ function App() {
   
   return (
     <>
-      <Header title={'Cv Form'}/>
-    
-      <Form 
-        isOpen={isOpen} 
-        personalInfo={personalInfo} 
-        educationInfo={educationInfo} 
-        experienceInfo={experienceInfo} 
-        EventHandlers={EventHandlers}
+      <Main 
+          isOpen={isOpen} 
+          personalInfo={personalInfo} 
+          educationInfo={educationInfo} 
+          experienceInfo={experienceInfo} 
+          EventHandlers={EventHandlers}          
       />
-
-      {
-        !isOpen && 
-        <Page 
-            personalInfo={personalInfo} 
-            educationInfo={educationInfo} 
-            experienceInfo={experienceInfo} 
-            EventHandlers={EventHandlers}
-        />
-      }
-
-      
     </>
   )
 }
