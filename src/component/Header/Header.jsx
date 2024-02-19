@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 export default function Header({title}) {
     return (
-        <div className="header">
+        <header>
             <h1>{title}</h1>
-        </div>
+        </header>
     )
 }
