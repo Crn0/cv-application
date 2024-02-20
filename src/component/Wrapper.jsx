@@ -16,21 +16,21 @@ export default function Main({
                 title={'CV Form'}
             />
             <main>
-            <Form 
-                isOpen={isOpen} 
-                personalInfo={personalInfo} 
-                educationInfo={educationInfo} 
-                experienceInfo={experienceInfo} 
-                EventHandlers={EventHandlers}
-            />
-            {!isOpen && 
-                <Page 
+                <Form 
+                    isOpen={isOpen} 
                     personalInfo={personalInfo} 
                     educationInfo={educationInfo} 
                     experienceInfo={experienceInfo} 
                     EventHandlers={EventHandlers}
                 />
-            }
+                {!isOpen && 
+                    <Page 
+                        personalInfo={personalInfo} 
+                        educationInfo={educationInfo} 
+                        experienceInfo={experienceInfo} 
+                        EventHandlers={EventHandlers}
+                    />
+                }
         </main>
         </>
     )
