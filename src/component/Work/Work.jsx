@@ -27,7 +27,7 @@ export default function Work({experienceInfo, EventHandlers}) {
                 labelName={'Responsibility:'}
                 textAreaName={'responsibility'}
                 value={experienceInfo.responsibility}
-                onChange={experienceInfo.responsibility}
+                onChange={EventHandlers.HandleResponsibility}
             />
 
 
